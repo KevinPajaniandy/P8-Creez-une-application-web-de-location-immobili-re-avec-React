@@ -1,0 +1,31 @@
+$primary-text-color:#FF6060;
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 55px 100px;
+    color: #FF6060;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    gap: 90px;  
+}
+
+.header a {
+    color: $primary-text-color;
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}   
+
+.header a.active {
+    text-decoration: underline;
+}
+
+.header__logo {
+   margin-right: auto;
+}

@@ -1,0 +1,20 @@
+$primary-text-color:#FF6060;
+$secondary-text-color :#FFFFFF;
+
+.apartment {
+    background-image: linear-gradient(to top, #863535, #ff6060);
+    border-radius: 10px;
+    width: 340px;
+    height: 340px;
+    display: grid;
+    align-items: end;
+}
+
+.apartment__subtitle {
+    width: 30%;
+    margin-inline-start: 20px ;
+    margin-block-end: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color:$secondary-text-color;
+}
