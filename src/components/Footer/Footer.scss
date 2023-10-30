@@ -1,15 +1,30 @@
-.footer {
-    background-color: black;
-    color: white;
-    display: flex;
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.footer-block {
+    background-color: $black;
+    @include flex-direction($direction: column, $align-i: center, $justify-c: center);
+    padding: 66px 464px 29px 463px;
     width: 100%;
-    min-height: 200px;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 28px;
+    height: 209px;
+        img{
+            width: 122px;
+            margin-bottom: 28.56px
+        };
+        p {
+            color: $white;
+            text-align: center;
+        }
 }
 
-.footer__logo {
-    color: white;
+@include mobile {
+    .footer-block{
+        padding: 58px 121px;
+        & img {
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
 }

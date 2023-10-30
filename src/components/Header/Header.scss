@@ -1,31 +1,8 @@
-$primary-text-color:#FF6060;
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
 
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 55px 100px;
-    color: #FF6060;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 24px;
-    gap: 90px;  
-}
-
-.header a {
-    color: $primary-text-color;
-    text-decoration: none;
-}
-
-.header a:hover {
-    text-decoration: underline;
-}   
-
-.header a.active {
-    text-decoration: underline;
-}
-
-.header__logo {
-   margin-right: auto;
+.header-block {
+    @include flex-direction ($justify-c: space-between, $align-i: center);
+    max-height: 68px;
+    margin : 45px 100px 45px 100px;
 }
