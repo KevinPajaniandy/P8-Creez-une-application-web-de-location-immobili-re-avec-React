@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.card-container {
+    background-color: $primary ;
+    @include flex-direction($justify-c: space-around, $flex-w: wrap);
+    border-radius: 25px;
+    width: 100%;
+    padding: 6px 1.5% 43px 1.5%;
+    @include mobile {
+        flex-direction: column;
+        background-color: $white;
+        padding: 0;
+    }
+    &::after{
+        content: '';
+        width: calc(28% - 0px); //Account for margins dans paddings
+        margin-bottom: 20px ;
+        visibility: hidden;
+        @include mobile {
+            margin-bottom: 0;
+        }
+
+    }
+}

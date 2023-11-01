@@ -5,6 +5,7 @@ import ArrowUp from '../../assets/up-arrow.png'
 const Collapse = ({ title, children }) => {
     // Define a state variable 'isOpen' to trake whether the collapse is open or closed
     const [isOpen, setIsOpen] = useState(false);
+    console.log(isOpen);
 
     const toggleCollapse = () => {
         setIsOpen(!isOpen); // Function to toggle the collapse state on button click
