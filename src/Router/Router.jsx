@@ -8,7 +8,9 @@ import Layout from '../components/Layout/Layout.jsx'
 
 function Router() {
     return (
+
         // Use the BrowserRouter component to define routing
+
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
@@ -20,6 +22,7 @@ function Router() {
                 </Route>
             </Routes>
         </BrowserRouter>
+
     )
 }
 

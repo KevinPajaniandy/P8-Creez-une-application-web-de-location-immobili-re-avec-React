@@ -1,0 +1,9 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.main-style {
+    margin: 50px 100px;
+    @include mobile{
+        margin: 27px 19.5px;
+    }
+}

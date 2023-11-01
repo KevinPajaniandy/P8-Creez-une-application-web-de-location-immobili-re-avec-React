@@ -1,9 +1,15 @@
 import React from 'react'
+import './Banner.scss'
 
-function Banner() {
+
+export default function Banner({ bannerImage, bannerTitle }) {
     return (
-        <div>Banner</div>
+        <section className='banner'>
+            <div className='banner_container'>
+                {bannerImage && <img src={bannerImage} alt='Bannière' />}
+            </div>
+            {bannerTitle && <h1 className='banner_title'>{bannerTitle}</h1>}
+        </section>
     )
 }
 
-export default Banner

@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.collapse-container {
+    @include flex-direction($direction:column, $align-i:center)
+}
+
+@include mobile{
+    .bannerAbout section {
+        height: 223px;
+        margin-bottom: 19px;
+        &.collapse-container{
+           margin-bottom: -8px;
+           height: 50%;
+        }
+    }
+}

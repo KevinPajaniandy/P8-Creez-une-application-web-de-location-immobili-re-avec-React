@@ -1,0 +1,42 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+// Inclusion of the 'sass:math' module.
+@use 'sass:math';
+
+.error {
+    @include flex-direction($direction: column,$justify-c:space-evenly, $align-i: center);
+    flex-wrap: wrap;
+    gap: 139px;  
+    min-height: 40vh;
+    color: $secondary;
+    margin-bottom: 118px;
+    @include mobile {
+    margin: 113px 0;
+    gap: 113px;
+      
+    }
+    &_title {
+      font-weight: 700;
+      font-size:14vw;
+      @include mobile {
+        font-size: 25vw;
+      }
+    }
+  
+    & p {
+        font-size: calc(max(2vw, 18px)); 
+        text-align: center;
+        @include mobile {
+          width: 260px; 
+        }
+        
+    }
+  
+    & a {
+      color: $secondary;
+      font-size: calc(max(1.5vw, 18px)); 
+      
+    }
+  }
+  
