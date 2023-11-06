@@ -1,0 +1,64 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.carousel {
+    @include flex-direction ($justify-c: center, $align-i: center);
+    position: relative;
+    height: 414px;
+    overflow: hidden;
+
+    &_slide {
+        @include img;
+        border-radius: 25px;
+    }
+
+    &_arrow-left,
+    &_arrow-right {
+        cursor: pointer;
+    }
+
+    &_arrow-left,
+    &_arrow-right,
+    &_index {
+        position: absolute;
+    }
+
+    &_arrow-left {
+        left: 0;
+        margin-left: 23px;
+    }
+
+    &_arrow-right {
+        right: 0;
+        margin-right: 23px;
+    }
+
+    &_index {
+        bottom: 24.92px;
+        color: $white;
+        font-size: 18px;
+    }
+}
+
+@include mobile {
+    .carousel {
+        height: 255px;
+
+        &_slide {
+            border-radius: 10px;
+            width: 100%;
+            height: 255px;
+            flex-shrink: 0;
+
+        }
+
+        &_arrow-left,
+        &_arrow-right {
+            width: 10px;
+        }
+
+        &_index {
+            visibility: hidden;
+        }
+    }
+}

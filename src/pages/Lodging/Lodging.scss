@@ -1,0 +1,47 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.block, .collapseLodging {
+    @include flex-direction($justify-c:space-between);
+}
+
+.block {
+
+    &_titleAndTag, &_ratingAndHost {
+        @include flex-direction($direction:column);
+    }
+    &_titleAndTag {
+        align-items: flex-start;
+        padding-top: 6px;
+    }
+    &_ratingAndHost {
+        align-items: flex-end;
+    }
+}
+
+.collapseLodging{
+    gap: 5%;
+    & ul >li{
+        list-style-type: none;
+    }
+}
+
+@include mobile {
+    .block, .collapseLodging{
+        flex-direction: column;
+    }
+    .block{
+        &_titleAndTag{
+            padding-top: 0;
+        }
+        &_ratingAndHost{
+            @include flex-direction($direction:row-reverse, $justify-c:space-between, $align-i:center);
+            padding-bottom: 0;
+            padding-top: 16px;   
+        }
+    }
+    .collapseLodging{
+        gap:20px;
+    } 
+
+}

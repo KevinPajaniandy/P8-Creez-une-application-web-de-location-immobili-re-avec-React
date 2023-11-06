@@ -8,7 +8,7 @@
     flex-direction: row;
     align-items: center;
     @include mobile {
-        
+        height: 80px;
     }
     &_logo{
         @include mobile{

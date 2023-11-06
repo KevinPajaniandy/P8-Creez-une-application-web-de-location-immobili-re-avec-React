@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.titleAndLocation {
+    color: $secondary;
+    & > *{
+        font-weight: 500;
+    }
+    &_title {
+        font-size: 36px;
+    }
+    &_location {
+        font-size: 18px;
+    }
+}
+
+@include mobile {
+    .titleAndLocation {
+        &_title {
+            font-size: 18px;
+        }
+        &_location {
+            font-size: 14px;
+        }
+    }
+}

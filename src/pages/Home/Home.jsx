@@ -8,7 +8,7 @@ import './Home.scss'
 export default function Home() {
 
     return (
-        <div>
+        <>
             <Banner bannerImage={HomeImage} bannerTitle="Chez vous, partout et ailleurs" />
             <section className="card-container">
                 {/* Map through the 'data' array and render a Card component for each item */}
@@ -21,7 +21,7 @@ export default function Home() {
                     />
                 ))}
             </section>
-        </div>
+        </>
     )
 }
 

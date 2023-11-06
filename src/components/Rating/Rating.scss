@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+
+.ratings{
+    white-space: nowrap;
+    &_star {
+        margin-right: 10px;
+    }
+}
+
+@include mobile{
+    .ratings{
+        & img{
+            width: 13.41px;
+            height: 13px;
+        }
+    }
+}
