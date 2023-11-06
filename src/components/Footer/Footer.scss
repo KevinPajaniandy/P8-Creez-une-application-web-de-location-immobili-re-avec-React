@@ -3,6 +3,7 @@
 
 .footer-block{
     background-color:$black ;
+    width: 100%;
     @include flex-direction($direction:column, $align-i:center);
     padding-top:66px ;
     padding-bottom:29px ;

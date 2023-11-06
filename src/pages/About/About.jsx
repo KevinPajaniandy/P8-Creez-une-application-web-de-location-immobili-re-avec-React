@@ -8,7 +8,7 @@ import aboutSections from './AboutSections';
 export default function About() {
 
     return (
-        <div className='bannerAbout'>
+        <>
             <Banner bannerImage={AboutImage} bannerTitle="" />
             <section className='collapse-container'>
                 {/* Map through the 'sections' array and render a Collapse component for each section */}
@@ -18,7 +18,7 @@ export default function About() {
                     </Collapse>
                 ))}
             </section>
-        </div>
+        </>
     );
 }
 

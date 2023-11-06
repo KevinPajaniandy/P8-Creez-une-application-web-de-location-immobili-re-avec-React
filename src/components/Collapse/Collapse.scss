@@ -30,22 +30,23 @@
         }    
     }
     &_content{
-        margin-top: -20px;
-        padding: 35px 20px 15px 20px;
+       padding: 35px 20px 15px 20px;
         font-size: 18px;
         font-weight: 400;
         background-color: $primary;
         border-radius: 5px;
         color: $secondary;
+        display: none;
+        
         &.open{
+            display: block;
             animation: slideDown 0.5s ease-in-out both;
-            margin-bottom: 30px
-           
         }
         &.close{
             animation: slideUp 0.5s ease-in-out both;
-            
+            display: none;
         }
+    
         
           
     }     
