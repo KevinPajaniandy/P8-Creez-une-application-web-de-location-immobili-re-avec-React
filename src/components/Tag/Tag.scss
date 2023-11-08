@@ -5,10 +5,13 @@
     @include flex-direction($align-i:center);
     gap: 10px;
     flex-wrap: wrap;
+    @include mobile {
+        gap: 20px;
+    }
     &_name{
         color: $white;
         background-color: $secondary;
-        border-radius: 10px;
+        border-radius: 5px;
         font-size: 14px;
         list-style-type: none;
         min-width: 115px;
@@ -17,6 +20,7 @@
         @include mobile {
             font-size: 10px;
             min-width: 80px;
+            height: 20px;
         }
         }
 }

@@ -11,7 +11,7 @@ export default function About() {
         <>
             <Banner bannerImage={AboutImage} bannerTitle="" />
             <section className='collapse-container'>
-                {/* Map through the 'sections' array and render a Collapse component for each section */}
+                {/* Parcourir le tableau 'sections' et rendre un composant Collapse pour chaque section */}
                 {aboutSections.map((section, index) => (
                     <Collapse key={index} title={section.title}>
                         <p>{section.content}</p>

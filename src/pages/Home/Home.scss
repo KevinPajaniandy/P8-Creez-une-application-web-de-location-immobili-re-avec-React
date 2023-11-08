@@ -14,7 +14,7 @@
     }
     &::after{
         content: '';
-        width: calc(28% - 0px); //Account for margins dans paddings
+        width: calc(28% - 0px); // Prendre en compte les marges dans les rembourrages
         margin-bottom: 20px ;
         visibility: hidden;
         @include mobile {

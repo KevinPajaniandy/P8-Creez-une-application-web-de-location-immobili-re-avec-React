@@ -7,12 +7,13 @@ export default function Header() {
     const location = useLocation()
     return (
         <header className='header-block'>
-            <img className='header-block_logo' src={Logo} alt="logo de Kasa" />
+            <Link to="/" className=''> <img className='header-block_logo' src={Logo} alt="logo de Kasa" /></Link>
+
             <nav>
                 <ul className='header-block_nav'>
-                    {/* Add the class 'active' to the Accueil link if the current location is '/' */}
+                    {/* Ajouter la classe 'active' au lien Accueil si l'emplacement actuel est '/' */}
                     <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Accueil</Link></li>
-                    {/* Add the class 'active' to the A Propos link if the current location is '/about' */}
+                    {/* Ajouter la classe 'active' au lien A Propos si l'emplacement actuel est '/about'*/}
                     <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>A Propos</Link></li>
                 </ul>
             </nav>

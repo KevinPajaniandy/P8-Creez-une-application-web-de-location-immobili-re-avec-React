@@ -3,7 +3,7 @@ import Router from './Router/Router.jsx'
 
 function App() {
   return (
-    <Router /> // Use the Router component to define routing
+    <Router /> // Utilisez le composant Router pour définir la gestion des routes.
   )
 }
 

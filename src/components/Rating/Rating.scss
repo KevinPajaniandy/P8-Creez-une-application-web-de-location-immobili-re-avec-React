@@ -4,9 +4,9 @@
 
 .ratings{
     white-space: nowrap;
-    &_star {
-        margin-right: 10px;
-    }
+    @include flex-direction($direction:row);
+    gap:5px;
+   
 }
 
 @include mobile{

@@ -1,18 +1,28 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
 
+.page .main-style {
+
+    gap: 25px !important;
+}
+
 .block, .collapseLodging {
     @include flex-direction($justify-c:space-between);
 }
 
 .block {
-
+    @include flex-direction($direction:row, $justify-c:space-between);
+    gap:unset;
+    @include mobile {
+        @include flex-direction($direction:column);
+        gap:10px;
+    }
     &_titleAndTag, &_ratingAndHost {
         @include flex-direction($direction:column);
+        gap:10px;
     }
     &_titleAndTag {
         align-items: flex-start;
-        padding-top: 6px;
     }
     &_ratingAndHost {
         align-items: flex-end;
@@ -31,13 +41,9 @@
         flex-direction: column;
     }
     .block{
-        &_titleAndTag{
-            padding-top: 0;
-        }
         &_ratingAndHost{
             @include flex-direction($direction:row-reverse, $justify-c:space-between, $align-i:center);
-            padding-bottom: 0;
-            padding-top: 16px;   
+            padding-bottom: 0;  
         }
     }
     .collapseLodging{

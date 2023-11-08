@@ -1,4 +1,4 @@
-// Customizable flexbox mixin //
+// Mixin flexbox personnalisable //
 @mixin flex-direction($direction:row, $justify-c:null, $align-c:null , $align-i:null, $flex-w:null ){
     display:flex;
     flex-direction:$direction;
@@ -8,14 +8,14 @@
     flex-wrap: $flex-w;
 }
 
-// Customizable mixin to adapt the width and height of the block as well as the adjustment of the image in relation to it //
+// Mixin personnalisable pour adapter la largeur et la hauteur du bloc ainsi que l'ajustement de l'image par rapport à celui-ci //
 @mixin img($object-fit:cover ,$width:100% ,$height:100%){
     object-fit:$object-fit;
     width:$width;
     height:$height;
 }
 
-// Media queries for mobile //
+// Médias requêtes pour les appareils mobiles //
 @mixin mobile{
     @media #{$breakpoint-screen-small}{
         @content;

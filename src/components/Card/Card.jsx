@@ -5,7 +5,7 @@ import './Card.scss'
 export default function Card({ id, cover, title }) {
     return (
         <article className='card-lease'>
-            {/* create a link that naviagate to the 'Lodging' page with the corresponding 'id' */}
+            {/* Créez un lien qui navigue vers la page 'Logement' avec l'identifiant ('id') correspondant */}
             <Link to={`/lodging/${id}`}>
                 <div className='card-lease_overlay'></div>
                 <img className="card-lease_img" src={cover} alt={title} />

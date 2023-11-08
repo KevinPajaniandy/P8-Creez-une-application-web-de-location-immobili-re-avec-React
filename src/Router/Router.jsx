@@ -11,7 +11,7 @@ import './Router.scss';
 function Router() {
     return (
 
-        // Use the BrowserRouter component to define routing
+        // Utilisez le composant BrowserRouter pour définir la gestion des routes
 
         <BrowserRouter>
             <div className='page'>
@@ -22,7 +22,7 @@ function Router() {
                         <Route index element={<Home />} />
                         <Route path="/lodging/:id" element={<Lodging />} />
                         <Route path="about" element={<About />} />
-                        {/* Route for all other unknown pages, displaying the Error component */}
+                        {/* Route pour toutes les autres pages inconnues, affichant le composant Error */}
                         <Route path="*" element={<Error />} />
 
                     </Routes>

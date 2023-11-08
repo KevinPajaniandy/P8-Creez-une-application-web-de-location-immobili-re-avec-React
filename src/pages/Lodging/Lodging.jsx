@@ -10,18 +10,18 @@ import Rating from '../../components/Rating/Rating';
 import Collapse from '../../components/Collapse/Collapse';
 
 const Lodging = () => {
-    const { id } = useParams(); // Extract the 'id' parameter from the URL using useParams hook
+    const { id } = useParams(); // Extraire le paramètre 'id' de l'URL en utilisant le hook useParams
 
-    // The useNavigate hook allows you to programmatically navigate to different routes in your application.
+    // Le hook useNavigate vous permet de naviguer de manière programmatique vers différentes routes dans votre application
     const navigate = useNavigate();
     const [lodgingData, setLodgingData] = useState();
 
     useEffect(() => {
-        // Find the lodgingItems data that matches the 'id'
+        // Trouver les données lodgingItems qui correspondent à l'identifiant 'id'
         const lodgingItems = data.find((item) => item.id === id);
         if (!lodgingItems) {
 
-            // If lodgingItems data is not found, navigate to the error page
+            // Si les données lodgingItems ne sont pas trouvées, naviguer vers la page d'erreur
             navigate('*');
         } else {
             setLodgingData(lodgingItems)
@@ -31,7 +31,7 @@ const Lodging = () => {
     if (lodgingData) {
         return (
 
-            <section>
+            <>
                 <Carousel pictures={lodgingData.pictures} title={lodgingData.title} />
                 <div className='block'>
                     <div className='block_titleAndTag'>
@@ -56,10 +56,8 @@ const Lodging = () => {
                     </Collapse>
                 </div>
 
-            </section>
+            </>
         );
-    } else {
-        return null;
     }
 }
 export default Lodging;

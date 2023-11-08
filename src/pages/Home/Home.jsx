@@ -11,11 +11,11 @@ export default function Home() {
         <>
             <Banner bannerImage={HomeImage} bannerTitle="Chez vous, partout et ailleurs" />
             <section className="card-container">
-                {/* Map through the 'data' array and render a Card component for each item */}
+                {/* Parcourir le tableau 'data' et rendre un composant Card pour chaque élément */}
                 {data.map(item => (
                     <Card
-                        key={item.id} //Assign a unique 'key' prop to each Card component
-                        id={item.id} // Pass the 'id', cover, and title prop to the Card component
+                        key={item.id} // Attribuer une clé unique à la prop 'key' pour chaque composant Card
+                        id={item.id} // Passer les props 'id', 'cover', et 'title' au composant Card
                         cover={item.cover}
                         title={item.title}
                     />

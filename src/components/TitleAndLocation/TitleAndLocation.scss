@@ -3,6 +3,8 @@
 
 .titleAndLocation {
     color: $secondary;
+    @include flex-direction(column);
+    gap:10px;
     & > *{
         font-weight: 500;
     }
